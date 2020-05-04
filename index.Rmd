@@ -1,0 +1,34 @@
+---
+title: "test"
+author: "Yee"
+date: "5/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r include=FALSE}
+#include for kable
+library(knitr)
+
+source("analysis.R")
+```
+
+# Demo of .RMD
+
+According to dataset, country with highest individualism was `r max_country`
+The country with highest collectivism was `r min_country`
+
+```{r, echo=FALSE}
+kable(idv_summary_df)
+```
+# Table of countries sorted by individualism scores
+
+```{r, echo=FALSE}
+kable(idv_data_df)
+```
+
